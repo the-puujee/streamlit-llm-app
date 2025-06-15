@@ -5,7 +5,10 @@ import streamlit as st
 from langchain_community.chat_models import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
 
-# .envファイルから環境変数を読み込む
+chat = ChatOpenAI(temperature=0.7, openai_api_key=openai_api_key)
+
+st.write("API KEY:", openai_api_key)  # 一時的な確認用
+
 
 # Streamlitアプリのタイトルと説明
 st.title("LLM専門家アプリ")
