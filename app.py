@@ -6,7 +6,7 @@ from langchain.schema import SystemMessage, HumanMessage
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 
-chat = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo",penai_api_key=openai_api_key)
+chat = ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo", openai_api_key=openai_api_key)
 
 
 
