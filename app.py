@@ -1,13 +1,14 @@
 import os
-openai_api_key = os.getenv("OPENAI_API_KEY")
-
 import streamlit as st
 from langchain_community.chat_models import ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
 
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
+st.write("APIキー:", openai_api_key)  # 一時的な確認用
+
 chat = ChatOpenAI(temperature=0.7, openai_api_key=openai_api_key)
 
-st.write("API KEY:", openai_api_key)  # 一時的な確認用
 
 
 # Streamlitアプリのタイトルと説明
